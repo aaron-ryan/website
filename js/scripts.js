@@ -7,8 +7,8 @@ function renderTime(){
 	var day = mydate.getDay();
 	var month = mydate.getMonth();
 	var daym = mydate.getDate();
-	var dayarray =  new Array("Sunday,","Monday,","Tuesday,","Wednesday,","Thursday,","FRIDAY,","Saturday,");
-	var montharray = new Array("January,","February,","March,","April,","May,","June,","July,","August,","SEPEMBER,","October,","November,","Decemeber,");
+	var dayarray =  new Array("Sunday,","Monday,","Tuesday,","Wednesday,","Thursmis,","Friday,","Saturday,");
+	var montharray = new Array("January,","February,","March,","April,","May,","June,","July,","August,","September","October","November","Decemeber");
 	// date end
 	
 	//time
@@ -26,9 +26,10 @@ function renderTime(){
 		} 
 		
 		var myClock = document.getElementById("clockDisplay");
-		myClock.textContent = "" +h+ ":" +m+ " "+ ampm + "\n" + dayarray[day]+ " " +daym+ " " +montharray[month]+ " " +year;
-		myClock.innerText = "" +h+ ":" +m+ " "+ ampm + "\n" + dayarray[day]+ " " +daym+ " " +montharray[month]+ " " +year;
+		myClock.innerHTML = "" +h+ ":" +m+ " "+ ampm + "\n" + dayarray[day]+ " " +daym+ " " +montharray[month]+ " " +year;
 
 		setTimeout("renderTime()", 1000);
 }
+
 renderTime();
+
