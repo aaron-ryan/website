@@ -8,3 +8,11 @@ body {
     color:white; 
     font-family: digital-7 ;
 }
+
+#weatherImage, #weatherTemp{
+    display:inline-block;
+}
+
+#weatherHigh, #weatherLow{
+    display:inline-block;
+}

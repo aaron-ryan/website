@@ -18,10 +18,10 @@ function success(position){
 		weatherDesc.innerHTML = (result.weather[0].description);
 
 		var weatherTemp = document.getElementById("weatherTemp");
-		weatherTemp.innerHTML = kelvinToFerenheit(result.main.temp) + "&#x2109";
+		weatherTemp.innerHTML = "High: " + kelvinToFerenheit(result.main.temp) + "&#x2109";
 
 		var weatherHigh = document.getElementById("weatherHigh");
-		weatherHigh.innerHTML = kelvinToFerenheit(result.main.temp_max) + "&#x2109";
+		weatherHigh.innerHTML = " Low: " +kelvinToFerenheit(result.main.temp_max) + "&#x2109";
 
 		var weatherLow = document.getElementById("weatherLow");
 		weatherLow.innerHTML = kelvinToFerenheit(result.main.temp_min) + "&#x2109";
