@@ -11,6 +11,21 @@ function success(position){
 	var weatherJSON = $.getJSON(url,function(result){
 		console.log("Weather data downloaded successfully.");
 		console.log(kelvinToFerenheit(result.main.temp));
+
+		var weatherImage = document.getElementById("weatherImage");
+		weatherImage.innerHTML = (result.main.description);
+
+		var weatherTemp = document.getElementById("weatherTemp");
+		weatherTemp.innerHTML = kelvinToFerenheit(result.main.temp) + "℉";
+
+		var weatherHigh = document.getElementById("weatherHigh");
+		weatherHigh.innerHTML = kelvinToFerenheit(result.main.temp_max) + "℉";
+
+		var weatherLow = document.getElementById("weatherLow");
+		weatherLow.innerHTML = kelvinToFerenheit(result.main.temp_min) + "℉";
+
+		var weatherDesc = document.getElementById("weatherDesc");
+		weatherDesc.innerHTML = (result.main.description);
 	});	
 }
 
