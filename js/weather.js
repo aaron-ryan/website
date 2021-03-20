@@ -10,22 +10,21 @@ function success(position){
 	url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=b7f16ac59dc7990c7c7a4cbd99dc59d4`
 	var weatherJSON = $.getJSON(url,function(result){
 		console.log("Weather data downloaded successfully.");
-		console.log(kelvinToFerenheit(result.main.temp));
 
 		var weatherImage = document.getElementById("weatherImage");
-		weatherImage.innerHTML = (result.main.description);
-
-		var weatherTemp = document.getElementById("weatherTemp");
-		weatherTemp.innerHTML = kelvinToFerenheit(result.main.temp) + "℉";
-
-		var weatherHigh = document.getElementById("weatherHigh");
-		weatherHigh.innerHTML = kelvinToFerenheit(result.main.temp_max) + "℉";
-
-		var weatherLow = document.getElementById("weatherLow");
-		weatherLow.innerHTML = kelvinToFerenheit(result.main.temp_min) + "℉";
+		weatherImage.innerHTML = ("Image");
 
 		var weatherDesc = document.getElementById("weatherDesc");
-		weatherDesc.innerHTML = (result.main.description);
+		weatherDesc.innerHTML = (result.weather[0].description);
+
+		var weatherTemp = document.getElementById("weatherTemp");
+		weatherTemp.innerHTML = kelvinToFerenheit(result.main.temp) + "&#x2109";
+
+		var weatherHigh = document.getElementById("weatherHigh");
+		weatherHigh.innerHTML = kelvinToFerenheit(result.main.temp_max) + "&#x2109";
+
+		var weatherLow = document.getElementById("weatherLow");
+		weatherLow.innerHTML = kelvinToFerenheit(result.main.temp_min) + "&#x2109";
 	});	
 }
 
