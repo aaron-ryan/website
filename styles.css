@@ -1,12 +1,10 @@
-
-
 @font-face {
-    font-family: 'alarm clock';
+    font-family: alarmClock;
     src: url(alarmClock.ttf);
 
 }
 body {
     background-color: black;
     color:white; 
-    font-family: 'alarm clock' ;
+    font-family: alarmClock ;
 }
